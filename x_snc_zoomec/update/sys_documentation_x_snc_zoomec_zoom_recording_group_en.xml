@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="group" label="Group(s)" language="en" table="x_snc_zoomec_zoom_recording">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>group</element>
+            <help/>
+            <hint/>
+            <label>Group(s)</label>
+            <language>en</language>
+            <name>x_snc_zoomec_zoom_recording</name>
+            <plural>Group(s)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>matt</sys_created_by>
+            <sys_created_on>2020-05-01 23:08:06</sys_created_on>
+            <sys_id>ede727411ba89410a51210a61a4bcb98</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Group(s)</sys_name>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_zoomec_zoom_recording_group_en</sys_update_name>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-01 23:58:22</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

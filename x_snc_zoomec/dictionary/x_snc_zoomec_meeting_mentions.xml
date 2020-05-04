@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Meeting Mentions" max_length="40" name="x_snc_zoomec_meeting_mentions" sizeclass="3" type="collection">
+        <element label="Meeting Record" max_length="32" name="meeting_record" reference="notify_conference_call" type="reference"/>
+        <element label="Sentiment Score" max_length="40" name="sentiment_score" type="float"/>
+        <element label="Transcript Record" max_length="32" name="transcript_record" reference="kb_knowledge" type="reference"/>
+        <element display="true" label="Transcript Substring" max_length="400" name="transcript_substring" type="string"/>
+        <element default="0" label="Weight" max_length="40" name="weight" type="integer"/>
+        <index name="index">
+            <element name="transcript_record"/>
+        </index>
+        <index name="index2">
+            <element name="meeting_record"/>
+        </index>
+    </element>
+</database>

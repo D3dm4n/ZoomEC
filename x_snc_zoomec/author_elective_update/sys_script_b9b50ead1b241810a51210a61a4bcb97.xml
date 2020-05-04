@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_zoomec_sanitized_transcripts</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Translate numbers</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var Small = {
+    'zero': 0,
+    'one': 1,
+    'two': 2,
+    'three': 3,
+    'four': 4,
+    'five': 5,
+    'six': 6,
+    'seven': 7,
+    'eight': 8,
+    'nine': 9,
+    'ten': 10,
+    'eleven': 11,
+    'twelve': 12,
+    'thirteen': 13,
+    'fourteen': 14,
+    'fifteen': 15,
+    'sixteen': 16,
+    'seventeen': 17,
+    'eighteen': 18,
+    'nineteen': 19,
+    'twenty': 20,
+    'thirty': 30,
+    'forty': 40,
+    'fifty': 50,
+    'sixty': 60,
+    'seventy': 70,
+    'eighty': 80,
+    'ninety': 90
+};
+
+var Magnitude = {
+    'thousand':     1000,
+    'million':      1000000,
+    'billion':      1000000000,
+    'trillion':     1000000000000,
+    'quadrillion':  1000000000000000,
+    'quintillion':  1000000000000000000,
+    'sextillion':   1000000000000000000000,
+    'septillion':   1000000000000000000000000,
+    'octillion':    1000000000000000000000000000,
+    'nonillion':    1000000000000000000000000000000,
+    'decillion':    1000000000000000000000000000000000,
+};
+
+var a, n, g;
+//gs.info("TEXT2NUM: " + text2num('zero zero one two'));
+// var gr = new GlideRecord('x_snc_zoomec_sanitized_transcripts');
+// //gr.get('81fbb5eddb2458106b7eccfa139619a4')
+// gr.query();
+
+// while(gr.next()) {
+
+	var script = current.clean_transcript + '';
+	script = script.replace(/\n/g, ' ');
+	script = script.replace(/\r/g, ' ');
+	script = script.replace(/\./g, '');
+
+	//gs.info("TRIMMED SCRIPT: " + script)
+	var wordArr = script.split(' ');
+	var numArr = [];
+	var numString = '';
+
+	for (var i = 0;i<wordArr.length;i++) {	
+		if (Small[wordArr[i]] || Magnitude[wordArr[i]] || wordArr[i] == 'hundred' || wordArr[i] == 'zero') {
+			//numArr.push(Small[wordArr[i]]);
+			numString += ' ' + wordArr[i];
+			// 		if (Small[wordArr[i]]) {
+			// 			numString += ' ' + wordArr[i];
+			// 		} else if (wordArr[i] == 'hundred') {
+			// 			numString += ' ' + wordArr[i];
+			// 		} else {
+			// 			numString += ' ' + wordArr[i];
+			// 		}
+
+		} else if (!Small[wordArr[i]] && !Magnitude[wordArr[i]] ) {
+			//gs.info("NUMSTRING PREPROCESS: " + numString)
+			if (wordArr[i] == 'and' && numString != '' ) {
+				numString += ' ' + wordArr[i];
+			} else {
+				if(numString != '') {
+					numArr.push(numString);
+				}
+				numString = '';
+			}
+		}
+	}
+
+//gs.info("NUM ARR PREPROCESS: " + numArr)
+	for (var j=0;j<numArr.length;j++) {
+		var regex = new RegExp('(' + numArr[j] + ')', '');
+
+		var nums = numArr[j].split(' ');
+		var newStr = '';
+
+		for (var k=0;k<nums.length;k++) {
+			//gs.info("NUMS K: " + nums[k])
+
+			if (Magnitude[nums[k]] || nums[k] == 'hundred') {
+				newStr = (text2num(numArr[j])) + '';
+				break;
+			} else {
+				if (nums[k] == 'zero') {
+					newStr += '0';
+				} else {
+					newStr += (text2num(nums[k])) + '';
+				}
+			}
+		}
+		newStr = newStr + '';
+		//gs.info("NEWSTR: " + newStr)
+		//gs.info("NUMARR: " + numArr[j])
+		script = script.replace(numArr[j], ' ' + newStr.slice(1));
+	}
+	//gs.info("***IMPROVED NUMBER ARR: " + numArr)
+	current.clean_transcript = script;
+	current.update();
+	//gs.info("***TRANSLATED SCRIPT: " + script);
+// }
+
+
+function text2num(s) {
+    a = s.toString().split(/[\s-]+/);
+    n = 0;
+    g = 0;
+    a.forEach(feach);
+	var stringNG = (n + g).toString();
+    //gs.info("***TEXT TO NUM: " + stringNG);
+	return stringNG;
+}
+
+function feach(w) {
+    var x = Small[w];
+    if (x != null) {
+        g = g + x;
+    }
+    else if (w == "hundred") {
+        g = g * 100;
+    }
+	else if (w == 'and') {
+		//do nothing
+	}
+    else {
+        x = Magnitude[w];
+        if (x != null) {
+            n = n + g * x;
+            g = 0;
+        }
+        else { 
+            //alert("Unknown number: "+w); 
+        }
+    }
+}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 08:08:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b9b50ead1b241810a51210a61a4bcb97</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Translate numbers</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_script_b9b50ead1b241810a51210a61a4bcb97</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 09:42:12</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=b9b50ead1b241810a51210a61a4bcb97"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</application>
+        <file_path/>
+        <instance_id>3794dfa14f801e00facf220f0310c766</instance_id>
+        <instance_name>hackathon130</instance_name>
+        <name>sys_script_b9b50ead1b241810a51210a61a4bcb97</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_snc_zoomec_sanitized_transcripts&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Translate numbers&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var Small = {
+    'zero': 0,
+    'one': 1,
+    'two': 2,
+    'three': 3,
+    'four': 4,
+    'five': 5,
+    'six': 6,
+    'seven': 7,
+    'eight': 8,
+    'nine': 9,
+    'ten': 10,
+    'eleven': 11,
+    'twelve': 12,
+    'thirteen': 13,
+    'fourteen': 14,
+    'fifteen': 15,
+    'sixteen': 16,
+    'seventeen': 17,
+    'eighteen': 18,
+    'nineteen': 19,
+    'twenty': 20,
+    'thirty': 30,
+    'forty': 40,
+    'fifty': 50,
+    'sixty': 60,
+    'seventy': 70,
+    'eighty': 80,
+    'ninety': 90
+};
+
+var Magnitude = {
+    'thousand':     1000,
+    'million':      1000000,
+    'billion':      1000000000,
+    'trillion':     1000000000000,
+    'quadrillion':  1000000000000000,
+    'quintillion':  1000000000000000000,
+    'sextillion':   1000000000000000000000,
+    'septillion':   1000000000000000000000000,
+    'octillion':    1000000000000000000000000000,
+    'nonillion':    1000000000000000000000000000000,
+    'decillion':    1000000000000000000000000000000000,
+};
+
+var a, n, g;
+//gs.info("TEXT2NUM: " + text2num('zero zero one two'));
+// var gr = new GlideRecord('x_snc_zoomec_sanitized_transcripts');
+// //gr.get('81fbb5eddb2458106b7eccfa139619a4')
+// gr.query();
+
+// while(gr.next()) {
+
+	var script = current.clean_transcript + '';
+	script = script.replace(/\n/g, ' ');
+	script = script.replace(/\r/g, ' ');
+	script = script.replace(/\./g, '');
+
+	//gs.info("TRIMMED SCRIPT: " + script)
+	var wordArr = script.split(' ');
+	var numArr = [];
+	var numString = '';
+
+	for (var i = 0;i&lt;wordArr.length;i++) {	
+		if (Small[wordArr[i]] || Magnitude[wordArr[i]] || wordArr[i] == 'hundred' || wordArr[i] == 'zero') {
+			//numArr.push(Small[wordArr[i]]);
+			numString += ' ' + wordArr[i];
+			// 		if (Small[wordArr[i]]) {
+			// 			numString += ' ' + wordArr[i];
+			// 		} else if (wordArr[i] == 'hundred') {
+			// 			numString += ' ' + wordArr[i];
+			// 		} else {
+			// 			numString += ' ' + wordArr[i];
+			// 		}
+
+		} else if (!Small[wordArr[i]] &amp;&amp; !Magnitude[wordArr[i]] ) {
+			//gs.info("NUMSTRING PREPROCESS: " + numString)
+			if (wordArr[i] == 'and' &amp;&amp; numString != '' ) {
+				numString += ' ' + wordArr[i];
+			} else {
+				if(numString != '') {
+					numArr.push(numString);
+				}
+				numString = '';
+			}
+		}
+	}
+
+//gs.info("NUM ARR PREPROCESS: " + numArr)
+	for (var j=0;j&lt;numArr.length;j++) {
+		var regex = new RegExp('(' + numArr[j] + ')', '');
+
+		var nums = numArr[j].split(' ');
+		var newStr = '';
+
+		for (var k=0;k&lt;nums.length;k++) {
+			//gs.info("NUMS K: " + nums[k])
+
+			if (Magnitude[nums[k]] || nums[k] == 'hundred') {
+				newStr = (text2num(numArr[j])) + '';
+				break;
+			} else {
+				if (nums[k] == 'zero') {
+					newStr += '0';
+				} else {
+					newStr += (text2num(nums[k])) + '';
+				}
+			}
+		}
+		newStr = newStr + '';
+		//gs.info("NEWSTR: " + newStr)
+		//gs.info("NUMARR: " + numArr[j])
+		script = script.replace(numArr[j], ' ' + newStr.slice(1));
+	}
+	//gs.info("***IMPROVED NUMBER ARR: " + numArr)
+	current.clean_transcript = script;
+	current.update();
+	//gs.info("***TRANSLATED SCRIPT: " + script);
+// }
+
+
+function text2num(s) {
+    a = s.toString().split(/[\s-]+/);
+    n = 0;
+    g = 0;
+    a.forEach(feach);
+	var stringNG = (n + g).toString();
+    //gs.info("***TEXT TO NUM: " + stringNG);
+	return stringNG;
+}
+
+function feach(w) {
+    var x = Small[w];
+    if (x != null) {
+        g = g + x;
+    }
+    else if (w == "hundred") {
+        g = g * 100;
+    }
+	else if (w == 'and') {
+		//do nothing
+	}
+    else {
+        x = Magnitude[w];
+        if (x != null) {
+            n = n + g * x;
+            g = 0;
+        }
+        else { 
+            //alert("Unknown number: "+w); 
+        }
+    }
+}
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;matt&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-05-03 08:08:23&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b9b50ead1b241810a51210a61a4bcb97&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Translate numbers&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="ZoomEC" source="x_snc_zoomec"&gt;8255ef051b689410a51210a61a4bcbff&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ZoomEC"&gt;8255ef051b689410a51210a61a4bcbff&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_b9b50ead1b241810a51210a61a4bcb97&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;matt&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-05-03 09:42:12&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=b9b50ead1b241810a51210a61a4bcb97"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>282112505</payload_hash>
+        <record_name>Translate numbers</record_name>
+        <reverted_from/>
+        <source>1965e7451b689410a51210a61a4bcba6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 09:42:12</sys_created_on>
+        <sys_id>bf9283ed1ba41810a51210a61a4bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171d9ea23eb0000001</sys_recorded_at>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 09:42:12</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>b79283ed23a418108ae2de404b53ce75</update_guid>
+        <update_guid_history>b79283ed23a418108ae2de404b53ce75:282112505,212deea1afa41810446b4f5fcd706dd7:-451479809</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>tyler</sys_created_by>
+        <sys_created_on>2020-05-03 15:38:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>58ab6c8bc89b4d28abc70c6b481c17c9</sys_id>
+        <sys_metadata>b9b50ead1b241810a51210a61a4bcb97</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Translate numbers</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_parent display_value="">8a2678a91b601810a51210a61a4bcbb0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_scope_delete display_value="">3fae2035c44c4fa287ae6cbb3144c0b1</sys_scope_delete>
+        <sys_update_name>sys_script_b9b50ead1b241810a51210a61a4bcb97</sys_update_name>
+        <sys_update_version display_value="sys_script_b9b50ead1b241810a51210a61a4bcb97">bf9283ed1ba41810a51210a61a4bcb75</sys_update_version>
+        <sys_updated_by>tyler</sys_updated_by>
+        <sys_updated_on>2020-05-03 15:38:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_snc_zoomec_recording_comand_instance</description>
+        <name>x_snc_zoomec_recording_comand_instance</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>larra</sys_created_by>
+        <sys_created_on>2020-05-02 00:33:16</sys_created_on>
+        <sys_id>306bbf89db60d4106b7eccfa139619ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_zoomec_recording_comand_instance</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_security_acl_306bbf89db60d4106b7eccfa139619ae</sys_update_name>
+        <sys_updated_by>larra</sys_updated_by>
+        <sys_updated_on>2020-05-02 00:33:16</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</application>
+        <file_path/>
+        <instance_id>3794dfa14f801e00facf220f0310c766</instance_id>
+        <instance_name>hackathon130</instance_name>
+        <name>sys_security_acl_306bbf89db60d4106b7eccfa139619ae</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_snc_zoomec_recording_comand_instance</description><name>x_snc_zoomec_recording_comand_instance</name><operation display_value="write">write</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>larra</sys_created_by><sys_created_on>2020-05-02 00:33:16</sys_created_on><sys_id>306bbf89db60d4106b7eccfa139619ae</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_zoomec_recording_comand_instance</sys_name><sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package><sys_policy/><sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope><sys_update_name>sys_security_acl_306bbf89db60d4106b7eccfa139619ae</sys_update_name><sys_updated_by>larra</sys_updated_by><sys_updated_on>2020-05-02 00:33:16</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-80742972</payload_hash>
+        <record_name>x_snc_zoomec_recording_comand_instance</record_name>
+        <reverted_from/>
+        <source>1965e7451b689410a51210a61a4bcba6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>larra</sys_created_by>
+        <sys_created_on>2020-05-02 00:33:16</sys_created_on>
+        <sys_id>3c6bbf89db60d4106b7eccfa139619d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171d2cd35290000001</sys_recorded_at>
+        <sys_updated_by>larra</sys_updated_by>
+        <sys_updated_on>2020-05-02 00:33:16</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>746bbf890260d410f3eb3aa5422470d5</update_guid>
+        <update_guid_history>746bbf890260d410f3eb3aa5422470d5:-80742972</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>larra</sys_created_by>
+        <sys_created_on>2020-05-02 00:34:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>22ebad21e0824e5a9d39ff55279d0d24</sys_id>
+        <sys_metadata>306bbf89db60d4106b7eccfa139619ae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_zoomec_recording_comand_instance</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_parent display_value="">c96bbf89db60d4106b7eccfa139619de</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_scope_delete display_value="">3fae2035c44c4fa287ae6cbb3144c0b1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_306bbf89db60d4106b7eccfa139619ae</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_306bbf89db60d4106b7eccfa139619ae">3c6bbf89db60d4106b7eccfa139619d5</sys_update_version>
+        <sys_updated_by>larra</sys_updated_by>
+        <sys_updated_on>2020-05-02 00:34:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

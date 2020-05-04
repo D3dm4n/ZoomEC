@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Task table schema" source="com.glide.task">da5798a41b130010a51210a61a4bcbd6</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>steele</sys_created_by>
+        <sys_created_on>2020-05-03 08:55:38</sys_created_on>
+        <sys_id>e9f7bee5dbe458106b7eccfa139619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_updated_by>steele</sys_updated_by>
+        <sys_updated_on>2020-05-03 08:55:38</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

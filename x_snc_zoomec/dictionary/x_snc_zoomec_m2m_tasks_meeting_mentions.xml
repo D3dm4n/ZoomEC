@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Zoomec M2m Tasks Meeting Mentions" max_length="40" name="x_snc_zoomec_m2m_tasks_meeting_mentions" sizeclass="2" text_index="true" type="collection">
+        <element attributes="encode_utf8=false" label="Meeting Mentions" max_length="32" name="meeting_mentions" reference="x_snc_zoomec_meeting_mentions" type="reference"/>
+        <element attributes="encode_utf8=false" label="Task" max_length="32" name="task" reference="task" type="reference"/>
+        <index name="index">
+            <element name="meeting_mentions"/>
+        </index>
+        <index name="index2">
+            <element name="task"/>
+        </index>
+    </element>
+</database>

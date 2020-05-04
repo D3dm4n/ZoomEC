@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_parent_transcript" label="parent_transcript" language="en" table="x_snc_zoomec_santrans">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_parent_transcript</element>
+            <help/>
+            <hint/>
+            <label>parent_transcript</label>
+            <language>en</language>
+            <name>x_snc_zoomec_santrans</name>
+            <plural>parent_transcripts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 15:52:11</sys_created_on>
+            <sys_id>d3475c3ddba858106b7eccfa13961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>parent_transcript</sys_name>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_zoomec_santrans_u_parent_transcript_en</sys_update_name>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 15:52:11</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

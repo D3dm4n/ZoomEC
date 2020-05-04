@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
+    <sys_aw_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <content/>
+        <content_attrs/>
+        <content_component/>
+        <content_tag/>
+        <detail/>
+        <detail_attrs/>
+        <detail_component/>
+        <detail_tag/>
+        <hide_until_ready>true</hide_until_ready>
+        <icon>phone-outline</icon>
+        <id>cti</id>
+        <label>Phone</label>
+        <order>300</order>
+        <roles/>
+        <sys_class_name>sys_aw_module</sys_class_name>
+        <sys_created_by>larra</sys_created_by>
+        <sys_created_on>2020-05-02 23:54:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a43cf025db6058106b7eccfa13961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cti</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_props/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_aw_module_a43cf025db6058106b7eccfa13961928</sys_update_name>
+        <sys_updated_by>larra</sys_updated_by>
+        <sys_updated_on>2020-05-02 23:54:53</sys_updated_on>
+        <toolbar_button display_value="Phone Button">683cf025db6058106b7eccfa13961928</toolbar_button>
+        <type>win</type>
+        <workspace_config display_value="Zoom Space">812c7025db6058106b7eccfa13961949</workspace_config>
+    </sys_aw_module>
+    <sys_variable_value action="delete_multiple" query="document_key=a43cf025db6058106b7eccfa13961928"/>
+</record_update>

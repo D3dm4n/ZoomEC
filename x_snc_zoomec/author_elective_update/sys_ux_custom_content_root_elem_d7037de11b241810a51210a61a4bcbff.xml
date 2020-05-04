@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_custom_content_root_elem">
+    <sys_ux_custom_content_root_elem action="DELETE">
+        <active>true</active>
+        <applicability>single</applicability>
+        <applicable_page display_value="Zoom Space">892c7025db6058106b7eccfa13961949</applicable_page>
+        <attrs/>
+        <children/>
+        <component/>
+        <is_root>true</is_root>
+        <layout/>
+        <macroponent display_value="Conference Call overview">d7037de11b241810a51210a61a4bcbfc</macroponent>
+        <macroponent_config>{
+  "label" : ""
+}</macroponent_config>
+        <name>Conference Call overview</name>
+        <order>0</order>
+        <page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page>
+        <parent/>
+        <parent_slot/>
+        <picker/>
+        <picker_condition/>
+        <placeholder display_value="Landing Page Placeholder">743cf025db6058106b7eccfa13961946</placeholder>
+        <sys_class_name>sys_ux_custom_content_root_elem</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 03:54:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d7037de11b241810a51210a61a4bcbff</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Conference Call overview</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_ux_custom_content_root_elem_d7037de11b241810a51210a61a4bcbff</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 04:23:56</sys_updated_on>
+        <tree_root/>
+    </sys_ux_custom_content_root_elem>
+    <sys_variable_value action="DELETE" query="document_key=d7037de11b241810a51210a61a4bcbff"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</application>
+        <file_path/>
+        <instance_id>3794dfa14f801e00facf220f0310c766</instance_id>
+        <instance_name>hackathon130</instance_name>
+        <name>sys_ux_custom_content_root_elem_d7037de11b241810a51210a61a4bcbff</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_custom_content_root_elem"><sys_ux_custom_content_root_elem action="INSERT_OR_UPDATE"><active>true</active><applicability>single</applicability><applicable_page display_value="Zoom Space">892c7025db6058106b7eccfa13961949</applicable_page><attrs/><children/><component/><is_root>true</is_root><layout/><macroponent display_value="Conference Call overview">d7037de11b241810a51210a61a4bcbfc</macroponent><macroponent_config>{
+  "label" : ""
+}</macroponent_config><name>Conference Call overview</name><order>0</order><page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page><parent/><parent_slot/><picker/><picker_condition/><placeholder display_value="Landing Page Placeholder">743cf025db6058106b7eccfa13961946</placeholder><sys_class_name>sys_ux_custom_content_root_elem</sys_class_name><sys_created_by>matt</sys_created_by><sys_created_on>2020-05-03 03:54:33</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d7037de11b241810a51210a61a4bcbff</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Conference Call overview</sys_name><sys_overrides/><sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package><sys_policy/><sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope><sys_update_name>sys_ux_custom_content_root_elem_d7037de11b241810a51210a61a4bcbff</sys_update_name><sys_updated_by>matt</sys_updated_by><sys_updated_on>2020-05-03 04:23:56</sys_updated_on><tree_root/></sys_ux_custom_content_root_elem><sys_variable_value action="delete_multiple" query="document_key=d7037de11b241810a51210a61a4bcbff"/></record_update>]]></payload>
+        <payload_hash>1042409275</payload_hash>
+        <record_name>Conference Call overview</record_name>
+        <reverted_from/>
+        <source>1965e7451b689410a51210a61a4bcba6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 04:23:56</sys_created_on>
+        <sys_id>79c9f9e51b241810a51210a61a4bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171d8c6c31f0000001</sys_recorded_at>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 04:23:56</sys_updated_on>
+        <type>UX Custom Content Extension</type>
+        <update_guid>f1c9f9e565241810e17196a06925d3c3</update_guid>
+        <update_guid_history>f1c9f9e565241810e17196a06925d3c3:1042409275,30c9b9e541241810a27a19f1b4af5263:-1132319813,e6e5f96514241810b4ea7c5e7f859268:152889563,1f03fde159241810f85b3a500ef4a22c:-1798724492</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 04:40:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_custom_content_root_elem">sys_ux_custom_content_root_elem</sys_db_object>
+        <sys_id>108fbf662da04fb8bb1a1681141bd044</sys_id>
+        <sys_metadata>d7037de11b241810a51210a61a4bcbff</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Conference Call overview</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_scope_delete display_value="">3fae2035c44c4fa287ae6cbb3144c0b1</sys_scope_delete>
+        <sys_update_name>sys_ux_custom_content_root_elem_d7037de11b241810a51210a61a4bcbff</sys_update_name>
+        <sys_update_version display_value="sys_ux_custom_content_root_elem_d7037de11b241810a51210a61a4bcbff">79c9f9e51b241810a51210a61a4bcbc3</sys_update_version>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 04:40:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

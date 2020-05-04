@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_breakdowns">
+    <pa_breakdowns action="DELETE">
+        <data_source/>
+        <default_filter/>
+        <description/>
+        <dimension display_value="Meeting transcript brkdwn manual">a33324ad1b201810a51210a61a4bcb33</dimension>
+        <display>true</display>
+        <facts_table/>
+        <field/>
+        <groups/>
+        <id/>
+        <name>Meeting transcript brkdwn manual</name>
+        <role_override>true</role_override>
+        <roles/>
+        <script/>
+        <scripted>false</scripted>
+        <sql_statement/>
+        <sys_class_name>pa_breakdowns</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 22:05:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f51324ad1b201810a51210a61a4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meeting transcript brkdwn manual</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>pa_breakdowns_f51324ad1b201810a51210a61a4bcb27</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 22:05:52</sys_updated_on>
+        <type>2</type>
+        <users/>
+        <visible_to>2</visible_to>
+    </pa_breakdowns>
+    <sys_translated_text action="DELETE" query="documentkey=f51324ad1b201810a51210a61a4bcb27"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</application>
+        <file_path/>
+        <instance_id>3794dfa14f801e00facf220f0310c766</instance_id>
+        <instance_name>hackathon130</instance_name>
+        <name>pa_breakdowns_f51324ad1b201810a51210a61a4bcb27</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_breakdowns"><pa_breakdowns action="INSERT_OR_UPDATE"><data_source/><default_filter/><description/><dimension display_value="Meeting transcript brkdwn manual">a33324ad1b201810a51210a61a4bcb33</dimension><display>true</display><facts_table/><field/><groups/><id/><name>Meeting transcript brkdwn manual</name><role_override>true</role_override><roles/><script/><scripted>false</scripted><sql_statement/><sys_class_name>pa_breakdowns</sys_class_name><sys_created_by>matt</sys_created_by><sys_created_on>2020-05-02 22:05:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f51324ad1b201810a51210a61a4bcb27</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Meeting transcript brkdwn manual</sys_name><sys_overrides/><sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package><sys_policy/><sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope><sys_update_name>pa_breakdowns_f51324ad1b201810a51210a61a4bcb27</sys_update_name><sys_updated_by>matt</sys_updated_by><sys_updated_on>2020-05-02 22:05:52</sys_updated_on><type>2</type><users/><visible_to>2</visible_to></pa_breakdowns><sys_translated_text action="delete_multiple" query="documentkey=f51324ad1b201810a51210a61a4bcb27"/></record_update>]]></payload>
+        <payload_hash>-762493443</payload_hash>
+        <record_name>Meeting transcript brkdwn manual</record_name>
+        <reverted_from/>
+        <source>1965e7451b689410a51210a61a4bcba6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 22:05:52</sys_created_on>
+        <sys_id>7f3364ad1b201810a51210a61a4bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171d76ca15f0000001</sys_recorded_at>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 22:05:52</sys_updated_on>
+        <type>Breakdown</type>
+        <update_guid>b73364ad32201810764967cafa9af163</update_guid>
+        <update_guid_history>b73364ad32201810764967cafa9af163:-762493443</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Meeting transcript brkdwn manual">5c9328ad1b201810a51210a61a4bcbaf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 22:07:17</sys_created_on>
+        <sys_db_object display_value="" name="pa_breakdowns">pa_breakdowns</sys_db_object>
+        <sys_id>1818a8980649481b881a1b5623188299</sys_id>
+        <sys_metadata>f51324ad1b201810a51210a61a4bcb27</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meeting transcript brkdwn manual</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_scope_delete display_value="">3fae2035c44c4fa287ae6cbb3144c0b1</sys_scope_delete>
+        <sys_update_name>pa_breakdowns_f51324ad1b201810a51210a61a4bcb27</sys_update_name>
+        <sys_update_version display_value="pa_breakdowns_f51324ad1b201810a51210a61a4bcb27">7f3364ad1b201810a51210a61a4bcb63</sys_update_version>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 22:07:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

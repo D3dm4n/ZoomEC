@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_snc_zoomec_sanitized_transcripts" version="2" view="">
+        <sys_ui_list action="DELETE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_snc_zoomec_sanitized_transcripts</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name/>
+            <sys_created_by/>
+            <sys_created_on/>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path/>
+            <sys_id>60f23ca5db2058106b7eccfa13961972</sys_id>
+            <sys_mod_count/>
+            <sys_name/>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by/>
+            <sys_updated_on>2020-05-02 23:28:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</application>
+        <file_path/>
+        <instance_id>3794dfa14f801e00facf220f0310c766</instance_id>
+        <instance_name>hackathon130</instance_name>
+        <name>sys_ui_list_x_snc_zoomec_sanitized_transcripts_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="" relationship="" sys_domain="global" table="x_snc_zoomec_sanitized_transcripts" version="2" view=""><sys_ui_list action="DELETE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>x_snc_zoomec_sanitized_transcripts</name><parent/><position/><relationship/><sum>false</sum><sys_class_name/><sys_created_by/><sys_created_on/><sys_domain>global</sys_domain><sys_domain_path/><sys_id>60f23ca5db2058106b7eccfa13961972</sys_id><sys_mod_count/><sys_name/><sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package><sys_policy/><sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope><sys_update_name/><sys_updated_by/><sys_updated_on>2020-05-02 23:28:22</sys_updated_on><sys_user/><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+        <payload_hash>1451428248</payload_hash>
+        <record_name>x_snc_zoomec_sanitized_transcripts</record_name>
+        <reverted_from/>
+        <source>1965e7451b689410a51210a61a4bcba6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 23:28:22</sys_created_on>
+        <sys_id>c426f8a91b601810a51210a61a4bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171d7b826870000001</sys_recorded_at>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 23:28:22</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>4026f8a98d6018101bc87cd355ac0313</update_guid>
+        <update_guid_history>4026f8a98d6018101bc87cd355ac0313:1451428248,e4f27ca59d205810a70492b1abb98b0b:830755181</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>tyler</sys_created_by>
+        <sys_created_on>2020-05-03 15:38:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>daf59afdb4c841788938e1eb6b8c52b1</sys_id>
+        <sys_metadata>6dd674e91b601810a51210a61a4bcbd2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_zoomec_sanitized_transcripts</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_parent display_value="">8a2678a91b601810a51210a61a4bcbb0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_scope_delete display_value="">3fae2035c44c4fa287ae6cbb3144c0b1</sys_scope_delete>
+        <sys_update_name>sys_ui_list_x_snc_zoomec_sanitized_transcripts_null</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_snc_zoomec_sanitized_transcripts_null">c426f8a91b601810a51210a61a4bcb13</sys_update_version>
+        <sys_updated_by>tyler</sys_updated_by>
+        <sys_updated_on>2020-05-03 15:38:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

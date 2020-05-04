@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>Get ZoomEC Transcripts and recordings</name>
+        <run_as display_value="Tyler ">01938f41dbac94106b7eccfa139619f9</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 00:15:00</run_period>
+        <run_start>2020-05-02 00:05:00</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[(function() {
+    var zoomRec = new GlideRecord('notify_conference_call');
+    zoomRec.addQuery('conference_call_id', '!=', '');
+    zoomRec.addQuery('u_transcript_uploaded', false);
+    zoomRec.addQuery('service_provider', 'Zoom');
+    zoomRec.addQuery('state', 'complete');
+    zoomRec.query();
+    if(zoomRec.hasNext()) {
+        while (zoomRec.next()) {
+            var getRecs = new x_snc_zoomec.crispyZoom().getRecording(zoomRec.conference_call_id);
+            if (JSON.stringify(getRecs).indexOf('Method failed:') == -1) {
+                var recs = JSON.parse(getRecs);
+                var ts = new crispyZoom().getTranscript(recs.recording_files[3].download_url);
+                
+                var knowSys;
+				for(var i = 0;i<recs.recording_files.length;i++){
+					var createRec = new GlideRecord('notify_recording');
+					createRec.newRecord();
+					createRec.duration = recs.duration;
+					createRec.notify_conference_call = zoomRec.sys_id;
+					createRec.url = recs.recording_files[i].download_url+ '';
+					createRec.recording_id = recs.recording_files[i].id+'';
+					createRec.x_snc_zoomec_file_type = recs.recording_files[i].file_type+'';
+					createRec.x_snc_zoomec_recording_type = recs.recording_files[i].recording_type+'';
+					createRec.insert();
+				}
+
+                var know = new GlideRecord('kb_knowledge');
+                know.newRecord();
+                know.kb_knowledge_base = gs.getProperty('x_snc_zoomec.zoomEC.knowledge_base');
+                know.kb_category = gs.getProperty('x_snc_zoomec.zoomEC.transcript_category');
+                know.u_conference_call = zoomRec.sys_id;
+                know.text = ts.replace(/\n/g, '<br/>');
+                know.short_description = zoomRec.description;
+                know.source = zoomRec.source;
+                knowSys = know.insert();
+                know.initialize();
+                if (know.get('sys_id', knowSys)) {
+                    know.workflow_state = "published";
+                    know.update();
+                }
+                zoomRec.u_transcript_uploaded = true;
+                zoomRec.update();
+            }
+        }
+    }
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>tyler</sys_created_by>
+        <sys_created_on>2020-05-02 00:53:46</sys_created_on>
+        <sys_id>03e47341db60d4106b7eccfa13961906</sys_id>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_name>Get ZoomEC Transcripts and recordings</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sysauto_script_03e47341db60d4106b7eccfa13961906</sys_update_name>
+        <sys_updated_by>tyler</sys_updated_by>
+        <sys_updated_on>2020-05-03 19:09:07</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="interaction" label="Meeting" max_length="40" name="x_snc_zoomec_meeting" sizeclass="40" type="collection">
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Participants" max_length="1024" name="participants" reference="sys_user" type="glide_list"/>
+    </element>
+</database>

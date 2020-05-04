@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
+    <sys_aw_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <content display_value="Inbox Module Content">943cb025db6058106b7eccfa139619e6</content>
+        <content_attrs/>
+        <content_component display_value="sn-inbox">15415f6bc913d31534330f91530c944c</content_component>
+        <content_tag/>
+        <detail display_value="Inbox Module Detail">ec3cb025db6058106b7eccfa139619ec</detail>
+        <detail_attrs/>
+        <detail_component display_value="sn-inbox-empty">ee222d2bff222300294153bd6338f113</detail_component>
+        <detail_tag/>
+        <hide_until_ready>false</hide_until_ready>
+        <icon>inbox-outline</icon>
+        <id>inbox</id>
+        <label>Inbox</label>
+        <order>200</order>
+        <roles/>
+        <sys_class_name>sys_aw_module</sys_class_name>
+        <sys_created_by>larra</sys_created_by>
+        <sys_created_on>2020-05-02 23:54:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d83cb025db6058106b7eccfa139619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inbox</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_props/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_aw_module_d83cb025db6058106b7eccfa139619dc</sys_update_name>
+        <sys_updated_by>larra</sys_updated_by>
+        <sys_updated_on>2020-05-02 23:54:52</sys_updated_on>
+        <toolbar_button display_value="Inbox Button">103cb025db6058106b7eccfa139619dd</toolbar_button>
+        <type>master_detail</type>
+        <workspace_config display_value="Zoom Space">812c7025db6058106b7eccfa13961949</workspace_config>
+    </sys_aw_module>
+    <sys_variable_value action="delete_multiple" query="document_key=d83cb025db6058106b7eccfa139619dc"/>
+</record_update>

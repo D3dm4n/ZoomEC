@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_zoomec.crispyZoom</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>crispyZoom</name>
+        <script><![CDATA[var crispyZoom = Class.create();
+crispyZoom.prototype = {
+    initialize: function() {
+        var requestBody;
+        var responseBody;
+        var status;
+        var zoomEC;
+        var response;
+        var regex;
+    },
+
+    startMeeting: function(startTime, topic) {
+        requestBody = {
+            "type": 1,
+            "topic": topic,
+            "start_time": startTime, //"2019-08-29T21:54:49Z",
+            "settings": {
+                "auto_recording": "cloud",
+            }
+        };
+        try {
+            zoomEC = new sn_ws.RESTMessageV2("zoomEC", "Start Meeting");
+            zoomEC.setAuthenticationProfile('oauth2', 'f3296b01db20d4106b7eccfa13961950');
+            zoomEC.setRequestBody(JSON.stringify(requestBody));
+            zoomEC.setHttpTimeout(10000);
+            response = zoomEC.execute();
+            responseBody = response.haveError() ? response.getErrorMessage() : response.getBody();
+            status = response.getStatusCode();
+        } catch (err) {
+            responseBody = err.getMessage();
+        }
+        return responseBody;
+
+    },
+    getRecording: function(meetingId) {
+        try {
+            zoomEC = new sn_ws.RESTMessageV2("zoomEC", "Get Recording");
+            zoomEC.setAuthenticationProfile('oauth2', 'f3296b01db20d4106b7eccfa13961950');
+            zoomEC.setStringParameter("meetingId", meetingId);
+            zoomEC.setHttpTimeout(10000);
+            response = zoomEC.execute();
+            responseBody = response.haveError() ? response.getErrorMessage() : response.getBody();
+            status = response.getStatusCode();
+        } catch (err) {
+            responseBody = err.getMessage();
+        }
+        return responseBody;
+
+    },
+    getTranscript: function(tsEndPoint) {
+        try {
+            zoomEC = new sn_ws.RESTMessageV2("ZoomEC", "Get Transcript");
+            zoomEC.setHttpTimeout(10000);
+            zoomEC.setEndpoint(tsEndPoint);
+            response = zoomEC.execute();
+            responseBody = response.haveError() ? response.getErrorMessage() : response.getBody();
+            status = response.getStatusCode();
+        } catch (err) {
+            responseBody = err.getMessage();
+        }
+        return responseBody;
+
+    },
+    getTaskPrefix: function(transcript) {
+        var prefixList = gs.getProperty('x_snc_zoomec.PrefixList').split(",");
+        var found = [];
+        for (var prefix = 0; prefix < prefixList.length; prefix++) {
+            var prefRegEx = new RegExp("(\: .*( " + prefixList[prefix] + " ))", "img");
+            if (transcript.match(prefRegEx)) {
+                found.push(prefixList[prefix]);
+            }
+        }
+        return found;
+    },
+    getTaskTableLabel: function(transcript) {
+        var tableLabels = gs.getProperty('x_snc_zoomec.TableLabels').split(",");
+        var found = [];
+        for (var tln = 0; tln < tableLabels.length; tln++) {
+            var tltName = transcript.search(tableLabels[tln]);
+            if (tltName != -1) {
+
+                var dbGR = new GlideRecord('sys_db_object');
+                dbGR.addEncodedQuery('super_class=1a5798a41b130010a51210a61a4bcbd7^label=' + tableLabels[tln]);
+                dbGR.query();
+
+                while (dbGR.next()) {
+                    found.push(dbGR.name.toString());
+                }
+            }
+        }
+        return found;
+    },
+
+    // Returns the transcript sanitized of speakers, time codes, and html
+    getCleanTranscript: function(kbArticleID) {
+
+        var kbArticle = new GlideRecord('kb_knowledge');
+        kbArticle.get(kbArticleID);
+
+        var transcript = kbArticle.text + '';
+        var cleanScript = this.stripHTML(transcript).toString();
+        gs.info(cleanScript);
+        var regex2 = /(.*(?:\r?.\n(?!\r?\n).*)*)(\d{2}:\d{2}:\d{2}[.,]\d{3})\s--\n\s(\d{2}:\d{2}:\d{2}[.,]\d{3})\s\n(.*[:]|)(.*(?:\r?\n(?!\r?\n).*)*)/gm;
+
+        var mystr = cleanScript.replace(regex2, "$5");
+        return mystr.slice(6).replace(/\n\d{1,20}$/gm, '');
+        //return cleanScript.replace(regex2, "$5");
+
+    },
+
+    // Removes html from the transcript string
+    stripHTML: function(str) {
+        // Regex to get HTML tags and Brackets
+        var regex = /(\<[^>]+?\>)|(\&[^;]{2,6}\;)|(\{[^}]+?\})|(\[[^\]]+\])/gm;
+        // If the regex comes back as true
+        var theMessage = str.toString().replace(regex, '\n');
+        return theMessage;
+    },
+
+    removeDuplicates: function(arr) {
+        return arr.filter(function(item, index) {
+            return arr.indexOf(item) >= index;
+        });
+    },
+
+    createMeetingMentions: function(arr, ts, mr) {
+
+        var know = new GlideRecord('kb_knowledge');
+        know.get(ts);
+        var noHtml = this.stripHTML(know.text);
+        var arrSplt = arr.toString().split(',');
+        var arrFinal = '';
+        for (var i = 0; i < arrSplt.length; i++) {
+			var g = i+1;
+            if (g >= arrSplt.length) {
+				arrFinal += arrSplt[i];
+			} else {
+				arrFinal += arrSplt[i] + '|';
+			}
+        }
+		gs.info("ARRFINAL: " + arrFinal)
+        //arrFinal = arrFinal.subString(0, arrFinal.length - 1);
+        var regFull = '(.*(?:\\r?\\n(?!\\r?\\n).*)*(?:' + arrFinal + ').*)'; 
+		//(.*(?:\\r?.\\n(?!\\r?\\n).*)*)\\n(\\d{2}:\\d{2}:\\d{2}[.,]\\d{3})\\s--\\n\\s(.*)(\\d{2}:\\d{2}:\\d{2}[.,]\\d{3})\\n(.*[:])
+        regex = new RegExp(regFull, 'gmi');
+		
+        //gs.info('GOT HERE regFUll: ' + regex)
+        //gs.info('GOT HERE noHtml: ' + noHtml)
+
+        var mmToCreate = noHtml.match(regex);
+
+        for (var j = 0; j < mmToCreate.length; j++) {
+
+            var mmExist = new GlideRecord('x_snc_zoomec_meeting_mentions');
+            mmExist.addQuery('transcript_record', ts);
+            mmExist.addQuery('meeting_record', mr);
+            mmExist.addQuery('transcript_substring', mmToCreate[j]);
+            mmExist.query();
+            if (!mmExist.hasNext()) {
+                var mm = new GlideRecord('x_snc_zoomec_meeting_mentions');
+                mm.newRecord();
+                mm.transcript_substring = mmToCreate[j];
+                mm.transcript_record = ts;
+                mm.meeting_record = mr;
+                mm.insert();
+            }else{
+				if(mmExist.next()){
+					mmExist.weight ++;
+					mmExist.update();
+				}
+			}
+        }
+    },
+
+    // Search Number keyword relation to meeting
+    globalSearch: function() {
+        //This was to test
+        //         var kbgr = new GlideRecord('kb_knowledge');
+        //         kbgr.get('bda2cbeddbe458106b7eccfa1396197e');
+        //         var transcript = kbgr.text;
+        var transcript = this.getTranscript();
+
+        // Get Numbers
+        // Search the Transcript for any numbers in the chat
+        var numberRegEx = /([0-9]{4,})/img;
+        var findNumbers = transcript.match(numberRegEx);
+
+        if (findNumbers.length != 0) {
+            var foundPrefixes = this.getTaskPrefix(transcript);
+            var foundLabels = this.getTaskTableLabel(transcript);
+
+            if (foundPrefixes.length != 0) {
+                var tablesToQuery = [];
+                tablesToQuery.push(foundLabels);
+
+                var numberGR = new GlideRecord('sys_number');
+                numberGR.addEncodedQuery('prefixIN' + foundPrefixes);
+                numberGR.query();
+                while (numberGR.next()) {
+                    tablesToQuery.push(numberGR.category.toString());
+                }
+                var findNumbersQuery = findNumbers.join('^ORnumberLIKE');
+                findNumbersQuery = "numberLIKE" + findNumbersQuery;
+
+                tablesToQuery = this.removeDuplicates(tablesToQuery);
+
+                var foundRecords = [];
+                for (var i = 0; i < tablesToQuery.length; i++) {
+                    var tableGR = new GlideRecord(tablesToQuery[i]);
+                    tableGR.addEncodedQuery(findNumbersQuery);
+                    tableGR.query();
+                    while (tableGR.next()) {
+                        var recordLink = "</br><a href='/" + tablesToQuery[i] + ".do?sys_id='" + tableGR.getUniqueValue() + ">" + tableGR.number.toString() + "</a>";
+                        foundRecords.push(recordLink);
+                    }
+                }
+                foundRecords = this.removeDuplicates(foundRecords);
+                return foundRecords;
+            }
+        }
+    },
+    type: 'crispyZoom'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>tyler</sys_created_by>
+        <sys_created_on>2020-05-01 23:18:16</sys_created_on>
+        <sys_id>5a2ae381db20d4106b7eccfa1396196c</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>crispyZoom</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_script_include_5a2ae381db20d4106b7eccfa1396196c</sys_update_name>
+        <sys_updated_by>steele</sys_updated_by>
+        <sys_updated_on>2020-05-04 04:23:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

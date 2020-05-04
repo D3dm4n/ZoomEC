@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Command Instance" max_length="40" name="x_snc_zoomec_command_instance" sizeclass="0" type="collection">
+        <element label="Zoom Meeting" max_length="32" name="zoom_meeting" reference="x_snc_zoomec_zoom_recording" type="reference"/>
+        <index name="index">
+            <element name="zoom_meeting"/>
+        </index>
+    </element>
+</database>

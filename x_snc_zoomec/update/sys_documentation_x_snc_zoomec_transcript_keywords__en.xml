@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Transcript Keywords" language="en" table="x_snc_zoomec_transcript_keywords">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Transcript Keywords</label>
+            <language>en</language>
+            <name>x_snc_zoomec_transcript_keywords</name>
+            <plural>Transcript Keywords</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-02 18:12:44</sys_created_on>
+            <sys_id>e4ed27d1db6c18106b7eccfa13961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Transcript Keywords</sys_name>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_zoomec_transcript_keywords__en</sys_update_name>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-02 18:12:44</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Sanitized Transcripts" max_length="40" name="x_snc_zoomec_sanitized_transcripts" sizeclass="120" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Clean Transcript" max_length="4000" name="clean_transcript" type="string"/>
+        <element attributes="encode_utf8=false" label="Parent Transcript" max_length="32" name="parent_transcript" reference="kb_knowledge" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="sanTrans" max_length="40" name="x_snc_zoomec_santrans" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=clean_transcript" label="clean_transcript" max_length="20314" name="u_clean_transcript" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=parent_transcript" label="parent_transcript" max_length="40" name="u_parent_transcript" type="string"/>
+    </element>
+</database>

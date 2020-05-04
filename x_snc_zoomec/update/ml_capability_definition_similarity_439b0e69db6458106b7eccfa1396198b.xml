@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="ml_capability_definition_similarity">
+    <ml_capability_definition_similarity action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <capability display_value="Similarity">15ab7f3c53873300d1dcddeeff7b12ce</capability>
+        <current_solution_version>1</current_solution_version>
+        <dataset_language>en</dataset_language>
+        <fields>clean_transcript</fields>
+        <filter/>
+        <solution_label>Transript Relationship ZoomEC</solution_label>
+        <solution_name>ml_x_snc_x_snc_zoomec_global_transript_relationship_zoomec</solution_name>
+        <solution_parameters/>
+        <stopwords>a6282a25533333008c5bddeeff7b12c3</stopwords>
+        <sys_class_name>ml_capability_definition_similarity</sys_class_name>
+        <sys_created_by>steele</sys_created_by>
+        <sys_created_on>2020-05-03 05:43:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>439b0e69db6458106b7eccfa1396198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transript Relationship ZoomEC</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>ml_capability_definition_similarity_439b0e69db6458106b7eccfa1396198b</sys_update_name>
+        <sys_updated_by>steele</sys_updated_by>
+        <sys_updated_on>2020-05-03 05:43:54</sys_updated_on>
+        <table>x_snc_zoomec_sanitized_transcripts</table>
+        <test_fields>number,short_description,description,comments_and_work_notes</test_fields>
+        <test_table>task</test_table>
+        <threshold>80</threshold>
+        <training_frequency>every_30_days</training_frequency>
+        <update_frequency>do_not_update</update_frequency>
+        <word_vector_corpus display_value="Sani Transcript Corpus - ZoomEC">c6fa4269db6458106b7eccfa139619bd</word_vector_corpus>
+    </ml_capability_definition_similarity>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>cody</sys_created_by>
+        <sys_created_on>2020-05-02 12:29:02</sys_created_on>
+        <sys_id>c23fda55dba818106b7eccfa139619f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>alm_transfer_order</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_scope_privilege_c23fda55dba818106b7eccfa139619f2</sys_update_name>
+        <sys_updated_by>cody</sys_updated_by>
+        <sys_updated_on>2020-05-02 12:29:02</sys_updated_on>
+        <target_name>alm_transfer_order</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

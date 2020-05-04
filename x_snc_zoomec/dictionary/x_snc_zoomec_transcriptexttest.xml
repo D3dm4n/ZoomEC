@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="TranscriptExtTest" max_length="40" name="x_snc_zoomec_transcriptexttest" sizeclass="118" type="collection">
+        <element label="Clean Transcript" max_length="2147483640" name="clean_transcript" type="string_full_utf8"/>
+        <element label="Parent Transcript" max_length="32" name="parent_transcript" reference="kb_knowledge" type="reference"/>
+    </element>
+</database>

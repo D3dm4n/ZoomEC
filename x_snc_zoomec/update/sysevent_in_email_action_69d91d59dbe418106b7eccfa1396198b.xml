@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition table="sys_email">subjectLIKEAudio Transcript for the recording^EQ<item endquery="false" field="subject" goto="false" newquery="false" operator="LIKE" or="false" value="Audio Transcript for the recording"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <from/>
+        <name>Zoom Transcript Ready</name>
+        <order>80</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[//	Note: current.opened_by is already set to the first UserID that matches the From: email address
+
+var emailBody = email.body_text;
+//var regex = (?<=integrated audio transcript:)(.*)(?=\s\()/i; would have worked if SN supported ?<=
+var regex = /transcript:\s(.*)\(/i;
+var formatString = emailBody.match(regex);
+formatString = formatString.toString().split('/share/');
+var linkToMatch = formatString[2]; //lol
+
+
+var gr = new GlideRecord("notify_recording");
+gr.addQuery("url","CONTAINS", linkToMatch);
+gr.query();
+if (gr.next()) {
+   gr.u_transcript_available = true;
+   gr.update();
+}
+
+gs.info(' Transcript available link matched: ' + linkToMatch + '  record : ' + gr.number);
+]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>steele</sys_created_by>
+        <sys_created_on>2020-05-02 07:25:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>69d91d59dbe418106b7eccfa1396198b</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Zoom Transcript Ready</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sysevent_in_email_action_69d91d59dbe418106b7eccfa1396198b</sys_update_name>
+        <sys_updated_by>steele</sys_updated_by>
+        <sys_updated_on>2020-05-02 18:12:16</sys_updated_on>
+        <table>notify_recording</table>
+        <template/>
+        <type>forward</type>
+    </sysevent_in_email_action>
+</record_update>

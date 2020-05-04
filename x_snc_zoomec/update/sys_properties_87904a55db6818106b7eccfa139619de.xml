@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>List of prefixes from the Number Table&#13;
+&#13;
+Original:&#13;
+REC,MSG,CHAT,CCR,SOG,TSKTPL,CHGPHASE,LICNS,DIS,CNTR,SRV,PO,PI,WRN,MSFT,ORPH,STAK,STA,CFLR,CC,ZOOM,REQAL,PPRJ,AST,TEM,KFT,ATP,AUD,RPTSUM,BAK,PRJ,PRJTASK,CMT,INC,SR,PRQ,DUP,MTRC,ASG,TO,REQD,FETR,PDCT,RLSE,RTSK,TASK,RML,TAC,COL,ISU,TOLSTASK,EXPD,CHG,PCR,STAL,TKT,RPLN,PRJSTAT,RSP,APM,PTASK,TOUR,PRB,TEMPLATE,REL,PHASE,PROD,FEAT,RTASK,DML,PUB,ISU,DREQ,DMND,ICT,PGM,LBRC,PGMTASK,CISET,PGMSTAT,BITM,STDCHG,DCSN,IDCR,TES,CRCC,TKRC,GSTASK,IDEA,ADOBE,BUS,DMNTSK,TOL,CTRC,AJLD,DST,ESET,AJL,RECD,BTSK,EXPS,AINST,PTSK,ICP,IMS,RECO,CTASK,TOLTASK,CIRC,BDGT,GAPRV,ACT,DOC,EXP,RC,EXPA,RALLOC,ENT,AUDR,CLNREQ,CMP,RSK,SUB,SLAR,TPL,SYMTC,KB,OLA,REQ,RITM,SCTASK,SLA,ISET</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_zoomec.PrefixList</name>
+        <read_roles/>
+        <suffix>PrefixList</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>cody</sys_created_by>
+        <sys_created_on>2020-05-02 10:15:48</sys_created_on>
+        <sys_id>87904a55db6818106b7eccfa139619de</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_snc_zoomec.PrefixList</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_properties_87904a55db6818106b7eccfa139619de</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 22:15:20</sys_updated_on>
+        <type>string</type>
+        <value>TASK,CHG,INC,KB,REQ,RITM,IDEA,FEAT,PRB,PRJ</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=87904a55db6818106b7eccfa139619de"/>
+</record_update>

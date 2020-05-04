@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>translate numbers</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var Small = {
+    'zero': 0,
+    'one': 1,
+    'two': 2,
+    'three': 3,
+    'four': 4,
+    'five': 5,
+    'six': 6,
+    'seven': 7,
+    'eight': 8,
+    'nine': 9,
+    'ten': 10,
+    'eleven': 11,
+    'twelve': 12,
+    'thirteen': 13,
+    'fourteen': 14,
+    'fifteen': 15,
+    'sixteen': 16,
+    'seventeen': 17,
+    'eighteen': 18,
+    'nineteen': 19,
+    'twenty': 20,
+    'thirty': 30,
+    'forty': 40,
+    'fifty': 50,
+    'sixty': 60,
+    'seventy': 70,
+    'eighty': 80,
+    'ninety': 90
+};
+
+var Magnitude = {
+    'thousand':     1000,
+    'million':      1000000,
+    'billion':      1000000000,
+    'trillion':     1000000000000,
+    'quadrillion':  1000000000000000,
+    'quintillion':  1000000000000000000,
+    'sextillion':   1000000000000000000000,
+    'septillion':   1000000000000000000000000,
+    'octillion':    1000000000000000000000000000,
+    'nonillion':    1000000000000000000000000000000,
+    'decillion':    1000000000000000000000000000000000,
+};
+
+var a, n, g;
+//gs.info("TEXT2NUM: " + text2num('zero zero one two'));
+var gr = new GlideRecord('x_snc_zoomec_sanitized_transcripts');
+//gr.get('81fbb5eddb2458106b7eccfa139619a4')
+gr.query();
+
+while(gr.next()) {
+
+	var script = gr.clean_transcript + '';
+	script = script.replace(/\n/g, ' ');
+	script = script.replace(/\r/g, ' ');
+	script = script.replace(/\./g, '');
+
+	//gs.info("TRIMMED SCRIPT: " + script)
+	var wordArr = script.split(' ');
+	var numArr = [];
+	var numString = '';
+
+	for (var i = 0;i<wordArr.length;i++) {	
+		if (Small[wordArr[i]] || Magnitude[wordArr[i]] || wordArr[i] == 'hundred' || wordArr[i] == 'zero') {
+			//numArr.push(Small[wordArr[i]]);
+			numString += ' ' + wordArr[i];
+			// 		if (Small[wordArr[i]]) {
+			// 			numString += ' ' + wordArr[i];
+			// 		} else if (wordArr[i] == 'hundred') {
+			// 			numString += ' ' + wordArr[i];
+			// 		} else {
+			// 			numString += ' ' + wordArr[i];
+			// 		}
+
+		} else if (!Small[wordArr[i]] && !Magnitude[wordArr[i]] ) {
+			//gs.info("NUMSTRING PREPROCESS: " + numString)
+			if (wordArr[i] == 'and' && numString != '' ) {
+				numString += ' ' + wordArr[i];
+			} else {
+				if(numString != '') {
+					numArr.push(numString);
+				}
+				numString = '';
+			}
+		}
+	}
+
+//gs.info("NUM ARR PREPROCESS: " + numArr)
+	for (var j=0;j<numArr.length;j++) {
+		var regex = new RegExp('(' + numArr[j] + ')', '');
+
+		var nums = numArr[j].split(' ');
+		var newStr = '';
+
+		for (var k=0;k<nums.length;k++) {
+			gs.info("NUMS K: " + nums[k])
+
+			if (Magnitude[nums[k]] || nums[k] == 'hundred') {
+				newStr = (text2num(numArr[j])) + '';
+				break;
+			} else {
+				if (nums[k] == 'zero') {
+					newStr += '0';
+				} else {
+					newStr += (text2num(nums[k])) + '';
+				}
+			}
+		}
+		newStr = newStr + '';
+		//gs.info("NEWSTR: " + newStr)
+		//gs.info("NUMARR: " + numArr[j])
+		script = script.replace(numArr[j], ' ' + newStr.slice(1));
+	}
+	//gs.info("***IMPROVED NUMBER ARR: " + numArr)
+	gr.clean_transcript = script;
+	gr.update();
+	//gs.info("***TRANSLATED SCRIPT: " + script);
+}
+
+
+function text2num(s) {
+    a = s.toString().split(/[\s-]+/);
+    n = 0;
+    g = 0;
+    a.forEach(feach);
+	var stringNG = (n + g).toString();
+    //gs.info("***TEXT TO NUM: " + stringNG);
+	return stringNG;
+}
+
+function feach(w) {
+    var x = Small[w];
+    if (x != null) {
+        g = g + x;
+    }
+    else if (w == "hundred") {
+        g = g * 100;
+    }
+	else if (w == 'and') {
+		//do nothing
+	}
+    else {
+        x = Magnitude[w];
+        if (x != null) {
+            n = n + g * x;
+            g = 0;
+        }
+        else { 
+            //alert("Unknown number: "+w); 
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 05:36:02</sys_created_on>
+        <sys_id>11c806211b641810a51210a61a4bcb91</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>translate numbers</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_script_fix_11c806211b641810a51210a61a4bcb91</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 19:53:26</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

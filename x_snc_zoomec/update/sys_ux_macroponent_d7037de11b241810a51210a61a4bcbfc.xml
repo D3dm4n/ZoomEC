@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "ckjjqjiitlccaaaaaanddbhhlggwrliijjedd",
+  "elementLabel" : "List",
+  "propertyValues" : {
+    "listTitle" : "Meeting Transcripts Published Today",
+    "table" : "kb_knowledge",
+    "query" : "kb_knowledge_base=8e0eff8ddb60d4106b7eccfa1396192c^publishedONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()",
+    "columns" : "",
+    "limit" : "10",
+    "maxColumns" : "5",
+    "page" : "1",
+    "hideHeader" : false,
+    "hideTitle" : false,
+    "hideTitleRowCount" : false,
+    "hideRefreshButton" : false,
+    "hideLastRefreshedText" : false,
+    "hideLinks" : false,
+    "hideViewAll" : false,
+    "hideHighlightedValues" : false,
+    "hideCellFilter" : true,
+    "hideCheckboxHover" : true,
+    "hideColumnFiltering" : true,
+    "hideColumnGrouping" : true,
+    "hideColumnSorting" : false,
+    "hideFilterPanel" : false,
+    "hideFirstPage" : false,
+    "hideLastPage" : false,
+    "hideLimitSelector" : false,
+    "hideMenuButton" : true,
+    "hideMultiEdit" : false,
+    "hideDeclarativeActions" : false,
+    "hideNextPage" : false,
+    "hidePages" : false,
+    "hidePagination" : true,
+    "hidePanel" : true,
+    "hidePanelAdvanced" : false,
+    "hidePanelConditionDelete" : false,
+    "hidePanelFooter" : false,
+    "hidePanelRestore" : false,
+    "hidePreviousPage" : false,
+    "hideQuickEdit" : true,
+    "hideRange" : false,
+    "hideRowCount" : false,
+    "hideRowSelector" : false,
+    "hideSelectAll" : true,
+    "hideEmptyStateImage" : false,
+    "hideDBViews" : false,
+    "hideUnnecessaryRowSelectors" : true
+  },
+  "slot" : "ck9qj8tl3000o3b7lc62bfi7p",
+  "definition" : {
+    "id" : "2b1c080881e05dc63b917044290b233f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null
+}, {
+  "elementId" : "ckjjqjbeesaaaaaaawddbhhlkeehyjwtf",
+  "elementLabel" : "List",
+  "propertyValues" : {
+    "listTitle" : "Active Meetings",
+    "table" : "notify_conference_call",
+    "query" : "active=true^sys_created_onBETWEENjavascript:gs.beginningOfYesterday()@javascript:gs.endOfToday()",
+    "columns" : "description,service_provider_data,conference_call_id,notify_number,sys_created_by,source",
+    "limit" : "10",
+    "maxColumns" : "5",
+    "page" : "1",
+    "hideHeader" : false,
+    "hideTitle" : false,
+    "hideTitleRowCount" : false,
+    "hideRefreshButton" : false,
+    "hideLastRefreshedText" : false,
+    "hideLinks" : false,
+    "hideViewAll" : false,
+    "hideHighlightedValues" : false,
+    "hideCellFilter" : true,
+    "hideCheckboxHover" : true,
+    "hideColumnFiltering" : true,
+    "hideColumnGrouping" : true,
+    "hideColumnSorting" : false,
+    "hideFilterPanel" : false,
+    "hideFirstPage" : false,
+    "hideLastPage" : false,
+    "hideLimitSelector" : false,
+    "hideMenuButton" : true,
+    "hideMultiEdit" : false,
+    "hideDeclarativeActions" : false,
+    "hideNextPage" : false,
+    "hidePages" : false,
+    "hidePagination" : true,
+    "hidePanel" : true,
+    "hidePanelAdvanced" : false,
+    "hidePanelConditionDelete" : false,
+    "hidePanelFooter" : false,
+    "hidePanelRestore" : false,
+    "hidePreviousPage" : false,
+    "hideQuickEdit" : true,
+    "hideRange" : false,
+    "hideRowCount" : false,
+    "hideRowSelector" : false,
+    "hideSelectAll" : true,
+    "hideEmptyStateImage" : false,
+    "hideDBViews" : false,
+    "hideUnnecessaryRowSelectors" : true
+  },
+  "slot" : "ck9qjb4sb000x3b7l8deyp49l",
+  "definition" : {
+    "id" : "2b1c080881e05dc63b917044290b233f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null
+}, {
+  "elementId" : "ckjjqjmxziaaaabbdddbhhlfaeeggaahhdk",
+  "elementLabel" : "List",
+  "propertyValues" : {
+    "listTitle" : "My Recent Transcripts",
+    "table" : "kb_knowledge",
+    "query" : "authorDYNAMIC90d1921e5f510100a9ad2572f2b477fe^sys_created_on&gt;javascript:gs.endOfLastWeek()",
+    "columns" : "source,short_description,sys_created_on",
+    "limit" : "5",
+    "maxColumns" : "5",
+    "page" : "1",
+    "hideHeader" : false,
+    "hideTitle" : false,
+    "hideTitleRowCount" : false,
+    "hideRefreshButton" : false,
+    "hideLastRefreshedText" : false,
+    "hideLinks" : false,
+    "hideViewAll" : false,
+    "hideHighlightedValues" : false,
+    "hideCellFilter" : true,
+    "hideCheckboxHover" : true,
+    "hideColumnFiltering" : true,
+    "hideColumnGrouping" : true,
+    "hideColumnSorting" : false,
+    "hideFilterPanel" : false,
+    "hideFirstPage" : false,
+    "hideLastPage" : false,
+    "hideLimitSelector" : false,
+    "hideMenuButton" : true,
+    "hideMultiEdit" : false,
+    "hideDeclarativeActions" : false,
+    "hideNextPage" : false,
+    "hidePages" : false,
+    "hidePagination" : true,
+    "hidePanel" : true,
+    "hidePanelAdvanced" : false,
+    "hidePanelConditionDelete" : false,
+    "hidePanelFooter" : false,
+    "hidePanelRestore" : false,
+    "hidePreviousPage" : false,
+    "hideQuickEdit" : true,
+    "hideRange" : false,
+    "hideRowCount" : false,
+    "hideRowSelector" : false,
+    "hideSelectAll" : true,
+    "hideEmptyStateImage" : false,
+    "hideDBViews" : false,
+    "hideUnnecessaryRowSelectors" : true
+  },
+  "slot" : "ck9qjmxzj001e3b7lodu8qjgh",
+  "definition" : {
+    "id" : "2b1c080881e05dc63b917044290b233f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null
+} ]</composition>
+        <data/>
+        <events/>
+        <extends display_value="Landing Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <interactions/>
+        <layout>{
+  "default" : {
+    "type" : "rowColumn",
+    "root" : {"id":"ck9qjtjlo001o3b7lpk12bx2s","type":"column","rows":[{"type":"row","id":"ck9qjtjlo001n3b7l5kuf7kmh","slotName":"ck9qjb4sb000x3b7l8deyp49l"},{"type":"row","id":"ck9qjau1k000t3b7l8eq612m2","columns":[{"type":"column","id":"ck9qjpuec001l3b7l3vcahi32","slotName":"ck9qj8tl3000o3b7lc62bfi7p","size":"6"},{"type":"column","id":"ck9qjpop7001j3b7le6fvcenz","slotName":"ck9qjmxzj001e3b7lodu8qjgh","size":"6"}]}],"size":"12"}
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>Conference Call overview</name>
+        <props/>
+        <root_component/>
+        <root_component_config/>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-03 03:54:33</sys_created_on>
+        <sys_id>d7037de11b241810a51210a61a4bcbfc</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Conference Call overview</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_ux_macroponent_d7037de11b241810a51210a61a4bcbfc</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-03 04:23:52</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>

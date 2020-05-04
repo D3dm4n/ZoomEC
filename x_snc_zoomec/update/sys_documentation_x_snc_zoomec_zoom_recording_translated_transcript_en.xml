@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="translated_transcript" label="Translated Transcript" language="en" table="x_snc_zoomec_zoom_recording">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>translated_transcript</element>
+            <help/>
+            <hint/>
+            <label>Translated Transcript</label>
+            <language>en</language>
+            <name>x_snc_zoomec_zoom_recording</name>
+            <plural>Translated Transcripts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>matt</sys_created_by>
+            <sys_created_on>2020-05-01 23:09:22</sys_created_on>
+            <sys_id>c838efc11ba89410a51210a61a4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Translated Transcript</sys_name>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_zoomec_zoom_recording_translated_transcript_en</sys_update_name>
+            <sys_updated_by>matt</sys_updated_by>
+            <sys_updated_on>2020-05-01 23:09:22</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user>matt</basic_auth_user>
+        <content/>
+        <function_name>Get Recording</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>ZoomEC [ Get Recording ]</qualified_name>
+        <rest_endpoint>https://api.zoom.us/v2/meetings/${meetingId}/recordings</rest_endpoint>
+        <rest_message display_value="ZoomEC">c2a82301db20d4106b7eccfa1396195d</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>tyler</sys_created_by>
+        <sys_created_on>2020-05-01 23:16:29</sys_created_on>
+        <sys_id>77b92b41db20d4106b7eccfa13961941</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Get Recording</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_rest_message_fn_77b92b41db20d4106b7eccfa13961941</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-04 03:57:54</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

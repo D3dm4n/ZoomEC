@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Recording Command" max_length="40" name="x_snc_zoomec_recording_command" sizeclass="0" type="collection">
+        <element label="Phrase" mandatory="true" max_length="300" name="phrase" type="string"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

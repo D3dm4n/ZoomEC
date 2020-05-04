@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list">
+    <sys_aw_list action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Meetings">4e5c86a9db6458106b7eccfa139619b7</category>
+        <columns>number,code,source,active,duration,conference_call_id,sys_created_on,sys_created_by,description,notify_number,service_provider,service_provider_data,state,table,sys_tags,u_transcript_uploaded,sys_updated_on,sys_updated_by,sys_mod_count</columns>
+        <condition/>
+        <groups/>
+        <list_attributes/>
+        <order>200</order>
+        <roles/>
+        <sys_class_name>sys_aw_list</sys_class_name>
+        <sys_created_by>larra</sys_created_by>
+        <sys_created_on>2020-05-03 06:09:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ddb19aaddb6458106b7eccfa13961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All Conference Meetings</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_aw_list_ddb19aaddb6458106b7eccfa13961940</sys_update_name>
+        <sys_updated_by>larra</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:09:44</sys_updated_on>
+        <table>notify_conference_call</table>
+        <title>All Conference Meetings</title>
+        <workspace display_value="Zoom Space">812c7025db6058106b7eccfa13961949</workspace>
+    </sys_aw_list>
+</record_update>

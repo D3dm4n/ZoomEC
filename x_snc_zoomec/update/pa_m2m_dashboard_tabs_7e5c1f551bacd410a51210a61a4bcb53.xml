@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Meeting Transcripts">505c1f551bacd410a51210a61a4bcb43</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 16:56:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7e5c1f551bacd410a51210a61a4bcb53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>505c1f551bacd410a51210a61a4bcb43</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_7e5c1f551bacd410a51210a61a4bcb53</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 16:56:10</sys_updated_on>
+        <tab display_value="Meeting Transcripts - New Tab">b25c1f551bacd410a51210a61a4bcb51</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_snc_zoomec_meeting_mentions" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Meeting Mentions - Default view" name="x_snc_zoomec_meeting_mentions" related_list="NULL" sys_domain="global" view="Default view">f6afc7dddbe818106b7eccfa1396198d</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_snc_zoomec_m2m_tasks_meeting_mentions.meeting_mentions</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-02 16:00:43</sys_created_on>
+            <sys_id>32afc7dddbe818106b7eccfa1396198f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-02 16:00:43</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Meeting Mentions - Default view</calculated_name>
+            <filter/>
+            <name>x_snc_zoomec_meeting_mentions</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-02 16:00:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f6afc7dddbe818106b7eccfa1396198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Meeting Mentions - Default view</sys_name>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_ui_related_x_snc_zoomec_meeting_mentions_null</sys_update_name>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-02 16:00:43</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

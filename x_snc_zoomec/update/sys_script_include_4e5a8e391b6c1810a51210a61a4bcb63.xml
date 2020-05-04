@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_zoomec.CrispyPredictsEngine</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Prediction Intelligence Engine Processing</description>
+        <name>CrispyPredictsEngine</name>
+        <script><![CDATA[var CrispyPredictsEngine = Class.create();
+CrispyPredictsEngine.prototype = {
+	initialize: function() {
+	},
+
+	processData : function(transcriptSubstr) {
+		var request = new sn_ws.RESTMessageV2();
+		request.setEndpoint('https://hackathon130.service-now.com/api/now/agent_intelligence/solution/ml_x_snc_global_global_meeting_mentions/prediction?top_n=3&short_description=' + transcriptSubstr + '&description=' + transcriptSubstr +'');
+		request.setHttpMethod('GET');
+
+		//Eg. UserName="admin", Password="admin" for this code sample.
+		var user = 'steele';
+		var password = 'LarraWins';
+
+		request.setBasicAuth(user,password);
+		request.setRequestHeader("Accept","application/json");
+
+		var response = request.execute();
+		return response.getBody();
+
+	},
+
+	type: 'CrispyPredictsEngine'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>steele</sys_created_by>
+        <sys_created_on>2020-05-04 00:15:43</sys_created_on>
+        <sys_id>4e5a8e391b6c1810a51210a61a4bcb63</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>CrispyPredictsEngine</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_script_include_4e5a8e391b6c1810a51210a61a4bcb63</sys_update_name>
+        <sys_updated_by>steele</sys_updated_by>
+        <sys_updated_on>2020-05-04 03:32:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

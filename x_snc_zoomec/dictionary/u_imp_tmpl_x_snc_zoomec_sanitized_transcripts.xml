@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Imp Tmpl X Snc Zoomec Sanitized Transcripts" max_length="40" name="u_imp_tmpl_x_snc_zoomec_sanitized_transcripts" sizeclass="254" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Clean Transcript" label="Clean Transcript" max_length="2147483640" name="u_clean_transcript" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Parent Transcript" label="Parent Transcript" max_length="32" name="u_parent_transcript" type="string"/>
+    </element>
+</database>

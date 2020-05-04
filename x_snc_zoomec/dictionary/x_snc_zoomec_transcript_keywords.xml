@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Transcript Keywords" max_length="40" name="x_snc_zoomec_transcript_keywords" sizeclass="1" text_index="true" type="collection">
+        <element attributes="encode_utf8=false" label="Conference Call" max_length="32" name="conference_call" reference="notify_conference_call" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Keyword" max_length="40" name="keyword" type="string"/>
+        <index name="index">
+            <element name="conference_call"/>
+        </index>
+    </element>
+</database>

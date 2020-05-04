@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_dimensions">
+    <pa_dimensions action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="kb_knowledge">textISEMPTY<item endquery="false" field="text" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        </conditions>
+        <description/>
+        <empty_value>No transcript</empty_value>
+        <facts_table>kb_knowledge</facts_table>
+        <field>sys_id</field>
+        <manual_breakdown/>
+        <name>Meeting Transcript by meeting</name>
+        <security_type>1</security_type>
+        <sys_class_name>pa_dimensions</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 16:46:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4cc99bd11bacd410a51210a61a4bcbd7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Meeting Transcript by meeting</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>pa_dimensions_4cc99bd11bacd410a51210a61a4bcbd7</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 21:00:38</sys_updated_on>
+    </pa_dimensions>
+    <sys_translated_text action="delete_multiple" query="documentkey=4cc99bd11bacd410a51210a61a4bcbd7"/>
+</record_update>

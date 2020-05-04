@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="897e0f9ddbe818106b7eccfa139619ba" sys_domain="global" table="x_snc_zoomec_meeting_mentions" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>transcript_substring</element>
+            <position>0</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>7af72db1dbac58106b7eccfa13961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>faf72db1dbac58106b7eccfa13961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>transcript_record</element>
+            <position>2</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>72f72db1dbac58106b7eccfa13961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>f6f72db1dbac58106b7eccfa13961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>meeting_record</element>
+            <position>4</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>7ef72db1dbac58106b7eccfa13961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>f2f72db1dbac58106b7eccfa13961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sentiment_score</element>
+            <position>6</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>7af72db1dbac58106b7eccfa13961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>weight</element>
+            <position>7</position>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-03 21:44:40</sys_created_on>
+            <sys_id>fef72db1dbac58106b7eccfa13961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_zoomec_meeting_mentions" sys_domain="global" view="Default view">897e0f9ddbe818106b7eccfa139619ba</sys_ui_section>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-03 21:44:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_zoomec_meeting_mentions</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>tyler</sys_created_by>
+            <sys_created_on>2020-05-02 15:55:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>897e0f9ddbe818106b7eccfa139619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_zoomec_meeting_mentions</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_ui_section_897e0f9ddbe818106b7eccfa139619ba</sys_update_name>
+            <sys_updated_by>tyler</sys_updated_by>
+            <sys_updated_on>2020-05-02 15:55:25</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

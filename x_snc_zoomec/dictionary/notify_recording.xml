@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Notificar grabación" max_length="40" name="notify_recording" read_only="true" sizeclass="44" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="File Type" max_length="40" name="x_snc_zoomec_file_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Recording Type" max_length="40" name="x_snc_zoomec_recording_type" type="string"/>
+    </element>
+</database>

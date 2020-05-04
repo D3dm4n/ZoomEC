@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f428efd91bacd410a51210a61a4bcb65" sys_domain="global" table="sys_hub_step_ext_output" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3428efd91bacd410a51210a61a4bcb77</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_step_ext_output" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f428efd91bacd410a51210a61a4bcb65</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">b428efd91bacd410a51210a61a4bcb71</sys_ui_section>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b828efd91bacd410a51210a61a4bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_step_ext_output" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f428efd91bacd410a51210a61a4bcb65</sys_ui_form>
+            <sys_ui_section caption="Reference Specification" display_value="Reference Specification" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">3828efd91bacd410a51210a61a4bcb77</sys_ui_section>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7828efd91bacd410a51210a61a4bcb6a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_step_ext_output" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f428efd91bacd410a51210a61a4bcb65</sys_ui_form>
+            <sys_ui_section caption="Choice List Specification" display_value="Choice List Specification" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">b428efd91bacd410a51210a61a4bcb67</sys_ui_section>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc28efd91bacd410a51210a61a4bcb6d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_step_ext_output" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f428efd91bacd410a51210a61a4bcb65</sys_ui_form>
+            <sys_ui_section caption="Dependent Field" display_value="Dependent Field" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">7c28efd91bacd410a51210a61a4bcb6a</sys_ui_section>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b028efd91bacd410a51210a61a4bcb71</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_step_ext_output" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f428efd91bacd410a51210a61a4bcb65</sys_ui_form>
+            <sys_ui_section caption="Calculated Value" display_value="Calculated Value" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f028efd91bacd410a51210a61a4bcb6e</sys_ui_section>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc28efd91bacd410a51210a61a4bcb7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_step_ext_output" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">f428efd91bacd410a51210a61a4bcb65</sys_ui_form>
+            <sys_ui_section caption="Default Value" display_value="Default Value" name="sys_hub_step_ext_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">bc28efd91bacd410a51210a61a4bcb7c</sys_ui_section>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sys_hub_step_ext_output</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>dana</sys_created_by>
+            <sys_created_on>2020-05-02 17:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f428efd91bacd410a51210a61a4bcb65</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_hub_step_ext_output</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f428efd91bacd410a51210a61a4bcb65</sys_update_name>
+            <sys_updated_by>dana</sys_updated_by>
+            <sys_updated_on>2020-05-02 17:47:38</sys_updated_on>
+            <sys_user/>
+            <view display_value="Advanced" name="advanced">7966be310a0a0b8c00bd504090503227</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

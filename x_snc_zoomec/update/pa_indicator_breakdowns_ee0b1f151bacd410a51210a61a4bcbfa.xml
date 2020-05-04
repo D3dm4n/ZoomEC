@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_indicator_breakdowns">
+    <pa_indicator_breakdowns action="INSERT_OR_UPDATE">
+        <breakdown display_value="Meeting Transcript Breakdown">948ad7151bacd410a51210a61a4bcb8e</breakdown>
+        <display>true</display>
+        <indicator display_value="Meeting Transcript Indc">7b4957d11bacd410a51210a61a4bcbaa</indicator>
+        <order>100</order>
+        <sql_statement/>
+        <sys_class_name>pa_indicator_breakdowns</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 16:50:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ee0b1f151bacd410a51210a61a4bcbfa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meeting Transcript Breakdown.Meeting Transcript Indc</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>pa_indicator_breakdowns_ee0b1f151bacd410a51210a61a4bcbfa</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 16:50:24</sys_updated_on>
+    </pa_indicator_breakdowns>
+</record_update>

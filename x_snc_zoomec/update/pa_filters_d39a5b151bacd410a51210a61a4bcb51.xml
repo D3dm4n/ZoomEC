@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_filters">
+    <pa_filters action="INSERT_OR_UPDATE">
+        <dimension display_value="Meeting Transcript by meeting">4cc99bd11bacd410a51210a61a4bcbd7</dimension>
+        <filter table="kb_knowledge">sys_created_onONYesterday@javascript:gs.beginningOfYesterday()@javascript:gs.endOfYesterday()^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Yesterday@javascript:gs.beginningOfYesterday()@javascript:gs.endOfYesterday()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <roles/>
+        <sys_class_name>pa_filters</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 16:49:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d39a5b151bacd410a51210a61a4bcb51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transcript element filter</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>pa_filters_d39a5b151bacd410a51210a61a4bcb51</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 16:49:38</sys_updated_on>
+        <title>Transcript element filter</title>
+    </pa_filters>
+</record_update>

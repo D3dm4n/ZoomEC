@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.text_index_translations=true" label="Zoom Recording" max_length="40" name="x_snc_zoomec_zoom_recording" sizeclass="29" type="collection">
+        <element label="Duration (minutes)" max_length="40" name="duration_minutes" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="End Time" max_length="40" name="end_time" type="glide_date_time"/>
+        <element attributes="start_locked=false" label="Group(s)" max_length="4000" name="group" reference="sys_user_group" type="glide_list"/>
+        <element attributes="encode_utf8=false" label="Host" max_length="32" name="host" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Link" max_length="1024" name="link" type="url"/>
+        <element attributes="edge_encryption_enabled=true" label="Meeting ID" max_length="40" name="meeting_id" type="string"/>
+        <element label="Meeting Name" max_length="250" name="meeting_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Participant Count" max_length="40" name="participant_count" type="integer"/>
+        <element label="Recording Complete" max_length="40" name="recording_complete" type="boolean"/>
+        <element label="Source Task" max_length="32" name="source_task" reference="task" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Start Time" max_length="40" name="start_time" type="glide_date_time" use_dynamic_default="true"/>
+        <element label="Transaction Complete" max_length="40" name="transaction_complete" type="boolean"/>
+        <element attributes="serializer=com.glide.script.TranslatedTextXMLSerializer" label="Translated Transcript" max_length="1000000000" name="translated_transcript" type="translated_text"/>
+        <element attributes="start_locked=false" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="User(s)" max_length="4000" name="user" reference="sys_user" type="glide_list" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="host"/>
+        </index>
+        <index name="index2">
+            <element name="source_task"/>
+        </index>
+    </element>
+</database>

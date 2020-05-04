@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_m2m">
+    <sys_m2m action="INSERT_OR_UPDATE">
+        <from_table>x_snc_zoomec_meeting_mentions</from_table>
+        <m2m_from_field>meeting_mentions</m2m_from_field>
+        <m2m_from_label>Tasks</m2m_from_label>
+        <m2m_table>x_snc_zoomec_m2m_tasks_meeting_mentions</m2m_table>
+        <m2m_to_field>task</m2m_to_field>
+        <m2m_to_label>Meeting Mentions</m2m_to_label>
+        <sys_class_name>sys_m2m</sys_class_name>
+        <sys_created_by>tyler</sys_created_by>
+        <sys_created_on>2020-05-02 16:00:25</sys_created_on>
+        <sys_id>9dedc79ddbe818106b7eccfa13961900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_zoomec_m2m_tasks_meeting_mentions</sys_name>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_m2m_9dedc79ddbe818106b7eccfa13961900</sys_update_name>
+        <sys_updated_by>tyler</sys_updated_by>
+        <sys_updated_on>2020-05-02 16:00:25</sys_updated_on>
+        <to_table>task</to_table>
+    </sys_m2m>
+</record_update>

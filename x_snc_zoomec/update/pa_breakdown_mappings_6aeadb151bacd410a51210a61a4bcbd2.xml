@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_breakdown_mappings">
+    <pa_breakdown_mappings action="INSERT_OR_UPDATE">
+        <breakdown display_value="Meeting Transcript Breakdown">948ad7151bacd410a51210a61a4bcb8e</breakdown>
+        <facts_table>kb_knowledge</facts_table>
+        <field>text</field>
+        <script display_value="Sanitizing the transcript text">95e114e11b201810a51210a61a4bcb31</script>
+        <scripted>false</scripted>
+        <sys_class_name>pa_breakdown_mappings</sys_class_name>
+        <sys_created_by>matt</sys_created_by>
+        <sys_created_on>2020-05-02 16:50:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6aeadb151bacd410a51210a61a4bcbd2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>948ad7151bacd410a51210a61a4bcb8e</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>pa_breakdown_mappings_6aeadb151bacd410a51210a61a4bcbd2</sys_update_name>
+        <sys_updated_by>matt</sys_updated_by>
+        <sys_updated_on>2020-05-02 21:31:04</sys_updated_on>
+    </pa_breakdown_mappings>
+</record_update>

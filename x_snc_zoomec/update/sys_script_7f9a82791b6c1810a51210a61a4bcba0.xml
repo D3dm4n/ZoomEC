@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_zoomec_meeting_mentions</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CrispyPredictionProcessor</name>
+        <order>900</order>
+        <priority>300</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	/*
+	 @Processor
+	 Get the meeting mention
+	 Pass transcript_substring into short description ,  description into the script include
+	 process the data and return in script include
+	 Loop through tasks returned from PI and for each task returned , gr.newRecord them into m2m table
+	*/
+	var transcript = current.transcript_substring.toString().replace(/\s/g,'%3D');
+	//Pass this transcript blurb to our PI Engine
+	var pde = JSON.parse(new CrispyPredictsEngine().processData(transcript)); 
+	var predictedRecord = [];
+	//gs.info('PDE ENGINE PREDICTION : ' + pde.result.output[0].outcomeArr.length); // pde.result.output[0].outcomeArr[i].ClassName);
+	var outcomeArrLength = pde.result.output[0].outcomeArr.length;
+	if(pde){
+		//gs.info('PDE ENGINE PREDICTION : ' + pde); // pde.result.output[0].outcomeArr[i].ClassName);
+		// For each record returned in the outcomeArr, generate a meeting mention - task GR
+		for (var i=0; i < outcomeArrLength; i++) {
+				//gs.info('PDE ENGINE PREDICTION : ' + pde); // pde.result.output[0].outcomeArr[i].ClassName);
+			var gr = new GlideRecord("x_snc_zoomec_m2m_tasks_meeting_mentions");
+			gr.newRecord();
+			gr.meeting_mentions = current.sys_id;
+			gr.task = pde.result.output[0].outcomeArr[i].ClassName;
+			gr.insert();
+ 
+		}
+
+ 
+		
+		
+	
+
+ 
+		
+	
+	}
+
+
+	
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>steele</sys_created_by>
+        <sys_created_on>2020-05-04 00:20:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7f9a82791b6c1810a51210a61a4bcba0</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>CrispyPredictionProcessor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ZoomEC" source="x_snc_zoomec">8255ef051b689410a51210a61a4bcbff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ZoomEC">8255ef051b689410a51210a61a4bcbff</sys_scope>
+        <sys_update_name>sys_script_7f9a82791b6c1810a51210a61a4bcba0</sys_update_name>
+        <sys_updated_by>steele</sys_updated_by>
+        <sys_updated_on>2020-05-04 03:16:25</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=7f9a82791b6c1810a51210a61a4bcba0"/>
+</record_update>
